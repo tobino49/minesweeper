@@ -210,7 +210,7 @@ class Game:
                          rect_dimension.inflate(10, 10))
         pygame.draw.rect(self.window, BC_LIST, rect_dimension)
 
-        game_over_text = self.font.render("You WIN", True, GOLD)
+        game_over_text = self.font.render("You WON", True, GOLD)
         self.window.blit(game_over_text, (
             (cell_size.get() * grid_size.get()) // 2 -
             game_over_text.get_width() // 2,
