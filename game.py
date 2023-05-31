@@ -1,5 +1,5 @@
 import pygame, spritesheet, random
-from consts import bomb_amount, grid_size, cell_size, TOP_SIZE, DARK_GREEN, BLUE, GREEN, BEIGE, DARK_BEIGE, BC_LIST, DARK_GRAY, RED, GOLD
+from consts import bomb_amount, grid_size, cell_size, TOP_SIZE, DARK_GREEN, GREEN, BEIGE, DARK_BEIGE, BC_LIST, DARK_GRAY, RED, GOLD, DARK_BLUE
 
 def get_grid(default):
     return [[default for x in range(grid_size.get())] for y in range(grid_size.get())]
@@ -188,11 +188,11 @@ class Game:
             (cell_size.get() * grid_size.get()) // 2 - game_over_text.get_width() // 2,
             (cell_size.get()*grid_size.get() + TOP_SIZE) // 2 - game_over_text.get_height() // 2 - 40))
 
-        restart_text = self.font.render("Recommencer", True, BLUE)
+        restart_text = self.font.render("Recommencer", True, DARK_BLUE)
         self.restart_rect = restart_text.get_rect(center=(
             (cell_size.get() * grid_size.get()) // 2,
             (cell_size.get() * grid_size.get() + TOP_SIZE) // 2 + 20))
-        pygame.draw.rect(self.window, BLUE, self.restart_rect.inflate(15, 10), 4)
+        pygame.draw.rect(self.window, DARK_BLUE, self.restart_rect.inflate(15, 10), 4)
         self.window.blit(restart_text, self.restart_rect)
 
     def display_win(self):
@@ -216,11 +216,11 @@ class Game:
             game_over_text.get_width() // 2,
             (cell_size.get()*grid_size.get() + TOP_SIZE) // 2 - game_over_text.get_height() // 2 - 40))
 
-        restart_text = self.font.render("Recommencer", True, BLUE)
+        restart_text = self.font.render("Recommencer", True, DARK_BLUE)
         self.restart_rect = restart_text.get_rect(center=(
             (cell_size.get() * grid_size.get()) // 2,
             (cell_size.get() * grid_size.get() + TOP_SIZE) // 2 + 20))
-        pygame.draw.rect(self.window, BLUE, self.restart_rect.inflate(15, 10), 4)
+        pygame.draw.rect(self.window, DARK_BLUE, self.restart_rect.inflate(15, 10), 4)
         self.window.blit(restart_text, self.restart_rect)
 
     def endGame_clicked(self, pos):
